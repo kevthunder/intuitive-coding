@@ -1,8 +1,8 @@
-# Intuitive Programming
+# Intuitive Coding
 
-## What is Intuitive Programming ?
+## What is Intuitive Coding ?
 
-Intuitive Programming is a set of rules I have written to improve productivity and code readability while programming.
+Intuitive Coding is a set of rules I have written to improve productivity and code readability while programming.
 
 It was originally written for myself but could possibly help many people to write better code.
 
@@ -25,3 +25,11 @@ It was originally written for myself but could possibly help many people to writ
 ## Rule 5 - No more than 2 arguments, after that, use named options
 
 ## Rule 6 - Keep it short
+
+## Rule 7 - Calcul things only when you need it
+
+### Rule 7.1 - Constructor should never or at least rarely trigger logic
+
+### Rule 7.2 - Store the result somewhere so it can be used again without going through all the logic
+
+### Rule 7.3 - If you language does not have getters and setters, try to allways use function instead of properties
