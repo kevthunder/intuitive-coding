@@ -24,6 +24,38 @@ While carefully thinking about how your application will work and know it's its 
 
 ### Adding context to you object
 
+When we are speaking allmost everything we talk about comme with a context. For example, if you ask "is the beer good?", you could be asking about a brand, you be asking about what a bar serve or you could be talking about the beer you friend was just served. It all depends on the context.
+
+You can try to mimic this by creating wrapper class that can add a context to an object.
+
+```ruby
+beer = the_dangerous_ipa
+if beer.good
+  p "this beer is good"
+else
+  p "this beer is bad"
+end
+```
+
+```ruby
+beer = BeerServedAt.new(the_dangerous_ipa, the_awsome_bar)
+if beer.good
+  p "this beer is good"
+else
+  p "this beer is bad"
+end
+```
+
+```ruby
+beer = BeerServedAt.new(the_dangerous_ipa, the_awsome_bar)
+beer = BeerServedTo.new(beer, steeve)
+if beer.good
+  p "this beer is good"
+else
+  p "this beer is bad"
+end
+```
+
 ### Rule 1.4 - Isolate any code you cant use this method in the smalest possible functions
 
 At some point you wont be able to write code like you would say it, because actual programing statement are not always expresive for human or because sometime somethig is more performent yet not thet readable or because... regular expressions... In that case just make sur they are alone in their function that is named to reflect what they actually do.
