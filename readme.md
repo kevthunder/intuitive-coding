@@ -8,7 +8,7 @@ It was originally written for myself but could possibly help many people to writ
 
 ## Rule 1 - Write your code as you would oraly explain what it does
 
-To achieve perfect readybility allmost all you code should explicitely and precisely tell someone that read it what it does even if that person have limited knowledge of the language you are usig. Not an easy thing to do, but why not begin by writing code as you naturaly talk. When you start codding a function just tell to yourself what this function do without thinking too much about it and do not get too technical, then write that as code.
+To achieve perfect readybility, your code should be as easy to read as a book even if that person have limited knowledge of the language you are using. Not an easy thing to do, but why not begin by writing code as you naturaly talk. When you start codding a function just tell to yourself what this function do without thinking too much about it and do not get too technical, then write that as code.
 
 - The subject is the object
 - The verb is the function
@@ -21,6 +21,8 @@ While carefully thinking about how your application will work and know it's its 
 ### Rule 1.2 - The verb is the function
 
 ### Rule 1.3 - The complements are your arguments
+
+### Adding context to you object
 
 ### Rule 1.4 - Isolate any code you cant use this method in the smalest possible functions
 
@@ -35,6 +37,18 @@ At some point you wont be able to write code like you would say it, because actu
 ### Rule 4.1 - Never use switch case, use associative array or dictionaries
 
 ## Rule 5 - No more than 2 arguments, after that, use named options
+
+Some complex function can have a lot of arguments, one of the problem with that is that it can become hard to remember what argument does what. You then have to waste time looking at the doccumentation or the function definition. Some IDE may help with that but you still have to waste time reading tooltips.
+
+A second worse problem of arguments is that for someone that read your code, it's impossible to get an good idea of what each argument of the function call do unless they know the function definition. He would basicly have to interupt his reading, go look at the function definition, the start reading again, all that without losing his train of thought. We dont want that.
+
+Named argument or options are acheived differently depending of the langage your are using but they allways help immensly the redability of the code that call the function.
+
+There is sometime alternatives that work just as well as named argument. Some function, for example, can get flags as argument and those flag can be nicely named constants which whould result in function calls with pretty explicit meaning.
+
+## Rule 5.1 - The function name should hint the argument order
+
+When you have 2 unamed arguments (hopefully not more), their may still be confusint on a reader point of view about what a function call do if it's unclear what argument should go in front of the other. 
 
 ## Rule 6 - Keep it short
 
